@@ -1,0 +1,21 @@
+/******************************************************************************
+
+C Program for Area And Perimeter Of Rectangle 
+
+*******************************************************************************/
+#include <stdio.h>
+
+int main()
+{
+    int len,width;
+    float area,perimeter;
+    printf("Enter the length of rectangle:");
+    scanf("%d",&len);
+    printf("Enter the width of rectangle:");
+    scanf("%d",&width);
+    area=len*width;
+    perimeter=2.0*(len+width);
+    printf("area of rectangle is %f \n",area);
+    printf("perimeter of rectanle is %f",perimeter);
+    return 0;
+}
