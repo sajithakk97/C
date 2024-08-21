@@ -7,19 +7,24 @@ LCM of two numbers
 
 int main()
 {
-    int num1,num2,small,i;
+    int num1,num2,large,i;
     printf("Enter two numbers:");
     scanf("%d %d",&num1,&num2);
     if(num1>num2){
-        small=num2;
+        large=num1;
     }
     else{
-        small=num1;
+        large=num2;
     }
-    for (i=2;i<=small;i++){
-        if (num1%i==0 && num2%i==0){
-            printf("LCM of two numbers is %d",i);
+    while(large>0){
+        if(large%num1==0 && large%num2==0){
+            printf("LCM is %d",large);
+            
             break;
+        }
+        else{
+            large++;
+        
         }
     }
     return 0;

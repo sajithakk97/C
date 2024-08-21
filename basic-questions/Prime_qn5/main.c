@@ -5,25 +5,28 @@ C Program to Check Whether a Number is Prime or Not
 *******************************************************************************/
 #include <stdio.h>
 
-int main()
-{
-    int num,i,flag=0;
-    printf("Enter a number:");
-    scanf("%d",&num);
-    
-    for (i=1;i<=num;i++){
-        
-        if (num%i==0){
-            flag++;
-        }
+int main() {
+    int num = 11;
+    int isPrime = 1;
+
+
+    if (num <= 1) {
+        isPrime = 0;
+    } else if (num % 2 == 0 && num != 2) {
+        isPrime = 0;
+    } else if (num % 3 == 0 && num != 3) {
+        isPrime = 0;
+    } else if (num % 5 == 0 && num != 5) {
+        isPrime = 0;
+    } else if (num % 7 == 0 && num != 7) {
+        isPrime = 0;
+    } 
+
+    if (isPrime) {
+        printf("%d is a prime number.\n", num);
+    } else {
+        printf("%d is not a prime number.\n", num);
     }
-    if(flag>2){
-        printf("Not Prime number");
-        
-    }
-    else{
-        printf("prime number");
-    }
+
     return 0;
-   
 }

@@ -6,9 +6,17 @@ Check armstrong number or not
 
 int main()
 {
-    int num,temp,b,sum=0;
+    int num,temp,b,temp2,sum=0,len=0;
     printf("Enter a value:");
     scanf("%d",&num);
+    temp2=num;
+    while(temp2>0){
+        temp2/=10;
+        len++;
+        
+    }
+    
+    printf("%d",len);
     temp=num;
     while(temp>0){
         b=temp%10;
@@ -20,7 +28,7 @@ int main()
         printf("armstrong number!");
     }
     else{
-        printf
+        printf("Not armstrong");
     }
     return 0;
 }

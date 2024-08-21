@@ -4,30 +4,32 @@ C Program to Display Prime Numbers Between Intervals
 *******************************************************************************/
 #include <stdio.h>
 
-int main()
+void main()
 {
-    int num,lmt,i,flag=0;
+    int num,lmt,i,j;
     printf("Enter a starting value and limit:");
     scanf("%d %d",&num,&lmt);
-    for (i=1;i<=num;i++){
-        
-        if (num%i==0){
-            flag++;
+    for (i=num;i<=lmt;i++){
+        int flag=0;
+        if (i==2){
+            printf("%d ",i);
         }
-    
-    
-}
+        for(j=2;j<=(i/2)+1;j++){
+            if(i%j==0){
+                flag++;
+                
+            }
+        
+        }
+        if (flag==0){
+            printf("%d ",i);
+            
+        }
+        
+        
+    }
+
 
     
-    
-    }
-    if(flag>2){
-        printf("Not Prime number");
-        
-    }
-    else{
-        printf("prime number");
-    }
-    return 0;
    
 }
